@@ -1,0 +1,27 @@
+Command.cs CommandInterpreter.cs PART1
+
+Interceptors                            Metodat
+AddCommandInterceptor.cs         PART2  cw
+AddCommandInterceptor.cs         PART3  StoreManager.TryGetProductMetadata(name, out ProductMetadata value)//Metoda1: 
+                                        StoreManager.TryGetProduct(productName, out var product))  //Metoda2
+                                        StoreManager.AddProduct(product)//Metoda3: 
+ListCommandInterceptor.cs        PART4  PrintToConsole(products);  StoreManager.GetProducts()//Metoda7
+ListAllCommandInterceptor.cs     PART5  PrintToConsole(productsMetadata); StoreManager.GetAvailableProducts() //Metoda8
+ClearCmdCommandInterceptor.cs    PART6  Console.Clear();
+DeleteCommandInterceptor.cs,     PART6  StoreManager.ClearProducts();//Metoda6:
+UpdateCommandInterceptor.cs      PART6  StoreManager.UpdateProduct(name,amount)//Metoda5: TryGetProduct(productName, out var product))//Metoda2
+CheckCommandInterceptor.cs       PART7  printer.PrintToConsole(new List<Product> { product }); TryGetProduct(productName, out var product))//Metoda2
+CommandInterceptor.cs            PART7  printer.PrintToConsole(products); StoreManager.GetProducts(); //Metoda7
+RemoveCommandInterceptor.cs      PART8  StoreManager.RemoveProduct(name); //Metoda4:
+PrintCommandInterceptor.cs       PART8  PrintToTextFile(location,products); StoreManager.GetProducts();//Metoda7 
+                                        <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+SaveCommandInterceptor.cs        PART9  PrintToJsonFile(List<Product> products); List<Product> ReadJsonFromFile(); StoreManager.GetProducts();//Metoda7 
+BuyCommandInterceptor.cs         PART10 StoreManager.GetProducts(); printer.PrintToJsonFile(new List<Product>());  StoreManager.ClearProducts();
+HelpCommandInterceptor.cs        PART10 ShowDoc(); ShowDoc(command);
+ 
+Permiresime te Interceptors      PART11  
+ Print CommandInterceptor.cs     var location = FolderBrowserManager.SelectFolderLocation(); printer.PrintToTextFile(location, products);
+ BuyCommandInterceptor.cs        var location = FolderBrowserManager.SelectFolderLocation(); printer.PrintToTextFile(location, products);
+                                 <TargetFramework>net8.0-windows</TargetFramework>  <UseWindowsForms>true</UseWindowsForms>
+                                 [STAThread]  
+ 
